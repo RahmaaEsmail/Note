@@ -15,9 +15,19 @@ function App() {
   function saveData()
   {
     let encodedData=localStorage.getItem('userToken');
-    let decodedData=jwtDecode(encodedData);
-    setUserData(decodedData)
-    console.log(decodedData);
+    if(encodedData != undefined)
+    {
+      let decodedData=jwtDecode(encodedData);
+     setUserData(decodedData)
+     console.log(decodedData);
+    }
+    else 
+    {
+      
+        setUserData(null)
+        localStorage.removeItem('userToken');
+      
+    }
   }
 
   useEffect(() => {
