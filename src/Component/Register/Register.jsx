@@ -176,12 +176,7 @@ function goToLogin()
 />
 
     </div>
-{/*onSubmit={submitForm} 
-onChange={getInputValue}
-onChange={getInputValue}
-onChange={getInputValue}
-onChange={getInputValue}
-onChange={getInputValue} */}
+
     <div className='w-50 m-auto mt-5'>
         <h1 className='text-white my-4 text-center'>Registartion Form</h1>
         {erroeMsg?<div className="alert alert-danger my-3 ">{erroeMsg}</div>:''}

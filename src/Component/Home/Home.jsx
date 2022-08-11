@@ -206,8 +206,7 @@ import $ from 'jquery'
 <div className="container">
   <div className="row">
   
-    {notes.length>0?
-    notes.map((note,index)=>{
+    {notes.map((note,index)=>{
       return(
         <div key={index} className="col-md-3 my-3">
       <div className={`${style.text}`}>
@@ -224,9 +223,9 @@ import $ from 'jquery'
       </div>
     </div>
       )
-    }):<div className='min-vh-100 d-flex justify-content-center align-items-center'><i className='fa fa-spinner fa-spin fa-3x text-white'></i></div>
+    })
   }
-    
+   
     
   </div>
 </div>
