@@ -176,11 +176,16 @@ function goToLogin()
 />
 
     </div>
-
+{/*onSubmit={submitForm} 
+onChange={getInputValue}
+onChange={getInputValue}
+onChange={getInputValue}
+onChange={getInputValue}
+onChange={getInputValue} */}
     <div className='w-50 m-auto mt-5'>
         <h1 className='text-white my-4 text-center'>Registartion Form</h1>
         {erroeMsg?<div className="alert alert-danger my-3 ">{erroeMsg}</div>:''}
-        <form onSubmit={submitForm}>
+        <form onSubmit={submitForm} >
         <div className="input-gp my-4">
                 <input onChange={getInputValue} type="text" name='first_name' className='form-control' placeholder='Enter Your First Name'/>
                  {setError("first_name")?<div className='text-danger mt-3'>{setError('first_name')}</div>:''}
@@ -190,7 +195,7 @@ function goToLogin()
                 {setError("last_name")?<div className='text-danger mt-3'>{setError('last_name')}</div>:''}
             </div>
             <div className="input-gp my-4">
-                <input onChange={getInputValue} type="number" name='age' className='form-control'placeholder='Enter Your Age' />
+                <input onChange={getInputValue}  type="number" name='age' className='form-control'placeholder='Enter Your Age' />
                 {setError("age")?<div className='text-danger mt-3'>{setError('age')}</div>:''}
             </div>
             <div className="input-gp my-4">

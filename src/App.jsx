@@ -59,8 +59,9 @@ function App() {
   }
    
   return (
+    // userData={userData} logout={logout}
     <>
-    <Navbar userData={userData} logout={logout}/>
+    <Navbar userData={userData} logout={logout}  />
      <Routes>
       <Route path='/' element={<ProtectedRoute><Home/></ProtectedRoute>}></Route>
       <Route path='home' element={<ProtectedRoute><Home/></ProtectedRoute>}></Route>
@@ -69,7 +70,16 @@ function App() {
     <Route path='*' element={<Notfound/>}></Route>
    </Routes>
     
-  
+
+
+    {/* <Routes>
+      <Route path='/' element={<Home/>}></Route>
+      <Route path='home' element={<Home/>}></Route>
+      <Route path='register' element={<Register/>}></Route>
+      <Route path='login' element={<Login />}></Route>
+    <Route path='*' element={<Notfound/>}></Route>
+   </Routes> */}
+  {/* saveData={saveData} */}
     </>
   );
 }

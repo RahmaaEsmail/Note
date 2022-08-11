@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import style from './Home.module.css';
 import Swal from 'sweetalert2';
 import $ from 'jquery'
-export default function Home() {
+ export default function Home() {
   let baseURL = 'https://route-egypt-api.herokuapp.com/';
   var token=localStorage.getItem('userToken');
   let decoded=jwtDecode(token);
@@ -166,7 +166,7 @@ export default function Home() {
 
       <div className="modal-footer">
         <button  type='submit'  className="btn btn-info text-white" data-bs-dismiss="modal">{btnLoading?<span className='text-whait'>Waiting <i className=' fa fa-spinner fa-spin'></i></span>:'Add'}</button>
-        {/* <button  type='button' id='cancel'  className="btn btn-danger text-white">Cancel</button> */}
+        <button  type='button' id='cancel'  className="btn btn-danger text-white">Cancel</button>
       </div>
     </div>
   </div>
@@ -195,7 +195,7 @@ export default function Home() {
       </div>
       <div className="modal-footer">
         <button type="submit" className="btn btn-info text-white" data-bs-dismiss="modal">{btnLoading?<span className='text-whait'>Waiting <i className=' fa fa-spinner fa-spin'></i></span>:'Update'}</button>
-        {/* <button type="button" className="btn btn-danger text-white">Cancel</button> */}
+        <button type="button" className="btn btn-danger text-white">Cancel</button>
       </div>
     </div>
   </div>
@@ -233,4 +233,4 @@ export default function Home() {
     </div> 
     </>
   )
-}
+ }

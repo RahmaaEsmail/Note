@@ -3,8 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
-  let token=localStorage.getItem('userToken');
-  let decoded=jwtDecode(token)
+
   return (
     <>
     <nav   className="navbar navbar-expand-lg navbar-dark shadow-5-strong">
@@ -19,7 +18,7 @@ export default function Navbar(props) {
         
        {props.userData? <>
         <li   className="nav-item">
-          <button className='btn btn-outline-success rounded-pill mx-2'>Welcome {decoded.first_name}</button>
+          <button className='btn btn-outline-success rounded-pill mx-2'>Welcome {props.userData.first_name}</button>
        </li>
         <li   className="nav-item">
           <a   className="nav-link" onClick={props.logout}>Logout</a>

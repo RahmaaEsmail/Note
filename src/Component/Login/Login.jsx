@@ -170,7 +170,9 @@ function goToHome()
 
     </div>
 
-
+{/* onSubmit={submitForm}
+onChange={getInputValue}
+onChange={getInputValue} */}
 
     <div className='w-50 m-auto mt-5'>
         <h1 className='text-white my-4 text-center'>Login Form</h1>
@@ -181,7 +183,7 @@ function goToHome()
                 {setError("email")?<div className='text-danger mt-3'>{setError('email')}</div>:''}
             </div>
             <div className="input-gp my-4">
-                <input onChange={getInputValue} type="password" name='password' className='form-control' placeholder='Enter Your Password' />
+                <input onChange={getInputValue}  type="password" name='password' className='form-control' placeholder='Enter Your Password' />
                 {setError("password")?<div className='text-danger mt-3'>{setError('password')}</div>:''}
             </div>
             <div className="input-gp my-4">
