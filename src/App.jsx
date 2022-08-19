@@ -63,11 +63,11 @@ function App() {
     <>
     <Navbar userData={userData} logout={logout}  />
      <Routes>
-      <Route path='' element={<ProtectedRoute><Home/></ProtectedRoute>}></Route>
+      <Route path='' element={<Login/>}></Route>
       <Route path='home' element={<ProtectedRoute><Home/></ProtectedRoute>}></Route>
       <Route path='register' element={<Register/>}></Route>
       <Route path='login' element={<Login saveData={saveData}/>}></Route>
-    <Route path='*' element={<Notfound/>}></Route>
+    <Route path='*' element={<ProtectedRoute><Notfound/></ProtectedRoute>}></Route>
    </Routes>
     
 
